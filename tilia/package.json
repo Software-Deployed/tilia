@@ -5,16 +5,6 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    },
-    "./src/Tilia.res": "./src/Tilia.res",
-    "./src/Tilia.resi": "./src/Tilia.resi",
-    "./src/Tilia.mjs": "./src/Tilia.mjs"
-  },
   "type": "module",
   "repository": {
     "type": "git",
@@ -29,7 +19,7 @@
     "build": "node esbuild.js",
     "clean": "rm -rf dist && rm -rf lib && rm -f *.tgz",
     "prebuild": "pnpm clean && rescript",
-    "prepack": "pnpm build && clean-package",
+    "prepack": "pnpm build",
     "postpack": "clean-package restore",
     "test": "ava"
   },
@@ -51,13 +41,11 @@
   "author": "Gaspard Anna Bucher <g.a.bucher@midasum.com>",
   "license": "MIT",
   "devDependencies": {
-    "@dzakh/rescript-ava": "^3.1.0",
-    "@rescript/core": "^1.6.1",
-    "@types/node": "^22.15.32",
+    "@dzakh/rescript-ava": "^3.2.0",
+    "@types/node": "^22.19.1",
     "ava": "5.2.0",
     "clean-package": "^2.2.0",
-    "esbuild": "^0.25.5",
-    "rescript": "^11.1.4"
+    "esbuild": "^0.27.1"
   },
   "ava": {
     "files": [

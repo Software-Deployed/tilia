@@ -22,7 +22,6 @@
     "tilia"
   ],
   "bs-dev-dependencies": [
-    "@rescript/core",
     "@rescript/react",
     "@dzakh/rescript-ava"
   ],
